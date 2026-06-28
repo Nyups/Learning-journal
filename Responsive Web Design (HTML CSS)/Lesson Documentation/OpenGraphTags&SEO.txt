@@ -1,0 +1,70 @@
+# Open Graph Tags
+
+## What are Open Graph Tags?
+
+Open Graph (OG) tags are metadata placed inside the `<head>` of an HTML document.
+
+They control how your website appears when someone shares its URL on platforms like:
+
+* Discord
+* Facebook
+* LinkedIn
+* Slack
+* Messenger
+* X (Twitter can also use its own Twitter Card tags)
+
+Example:
+
+```html
+<head>
+    <title>My Website</title>
+
+    <meta charset="UTF-8">
+
+    <!-- Search engine description -->
+    <meta
+        name="description"
+        content="Portfolio of Nyun, aspiring full-stack developer.">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="My Awesome Website">
+
+    <meta property="og:description"
+          content="Learn HTML, CSS and JavaScript...">
+
+    <meta property="og:image"
+          content="https://mysite.com/preview.png">
+
+    <meta property="og:url"
+          content="https://my-awesome-website.com">
+
+    <meta property="og:type" content="website" />      
+</head>
+```
+
+Typical result when someone shares your website:
+
+```
+┌───────────────────────────────┐
+│ 🖼️  [Thumbnail Image]         │
+│                               │
+│ My Awesome Website            │
+│ Learn HTML, CSS and JS...     │
+│ my-awesome-website.com        │
+└───────────────────────────────┘
+```
+
+## Do Open Graph Tags Affect SEO?
+
+**Not directly.**
+
+Search engines mainly use:
+
+* `<title>`
+* `<meta name="description">`
+* The page's actual content
+
+Open Graph tags are intended for **social media and messaging platforms**, not for search rankings.
+
+However, they can indirectly help SEO by making shared links more attractive, encouraging more people to click and share your website.

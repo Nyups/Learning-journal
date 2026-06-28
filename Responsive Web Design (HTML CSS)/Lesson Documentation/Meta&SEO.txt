@@ -1,0 +1,37 @@
+The Role of the Meta Description, and How Does It Affect SEO :
+
+SEO, or Search Engine Optimization, is a practice that optimizes web pages so they become more visible and rank higher on search engines.
+One way to improve our site's SEO, is to provide a short description for the web page using the "meta" element.
+For example :
+
+<!-- 
+<meta
+  name="description"
+  content="Discover expert tips and techniques to make the best cookies in the world."
+/>
+-->
+
+By setting the name attribute to description, it ensures that browsers, search engines, and other web tools correctly interpret this metadata.
+
+The "content" is where we put our description, it's better to keep it short and simple
+because search engines will often truncate the description based on the results page layout.
+
+
+
+For a final example :
+
+<meta
+    name="description"
+    content="Learn how to bake soft chocolate chip cookies in under 30 minutes.">
+
+would look like this in the search engine :
+
+
+Easy Cookie Recipe
+www.mycookies.com
+
+Learn how to bake soft chocolate chip cookies in under 30 minutes.
+
+
+
+Note: Search engines may choose to display a different description present in the code if they believe it better matches the user's search query.
