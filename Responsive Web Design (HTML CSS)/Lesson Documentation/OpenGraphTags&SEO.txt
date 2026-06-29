@@ -33,7 +33,7 @@ Example:
     <meta property="og:description"
           content="Learn HTML, CSS and JavaScript...">
 
-    <meta property="og:image"
+    <meta property="og:image" 
           content="https://mysite.com/preview.png">
 
     <meta property="og:url"
@@ -47,7 +47,7 @@ Typical result when someone shares your website:
 
 ```
 ┌───────────────────────────────┐
-│ 🖼️  [Thumbnail Image]         │
+│   [Thumbnail Image]           │
 │                               │
 │ My Awesome Website            │
 │ Learn HTML, CSS and JS...     │
@@ -57,7 +57,7 @@ Typical result when someone shares your website:
 
 ## Do Open Graph Tags Affect SEO?
 
-**Not directly.**
+**Nah**
 
 Search engines mainly use:
 
