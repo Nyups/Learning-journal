@@ -1,0 +1,91 @@
+What Are the Roles of the HTML Audio and Video Elements, and How Do They Work.
+
+the <audio> and <video> elements allow you to add sounds and video to your HTML (wow thanks sherlock! xD)
+<audio> support popular audio format like [.mp3][.wav] and [.ogg].
+<video> support [.mp4][.ogg] and [.webm]
+
+to include audio or video content to the web page we use src="file path here"
+
+If we want to see the audio player on the page we can use the controls attribute like so :
+<audio src="verycoolmusic" controls></audio>
+
+the control attribute allow control of the audio on the page like Pause Resume ect.
+
+Aside from src and controls attribute, there are several other attribute that enhance the functionality of the audio like "loop"
+that will make the song... loop.
+here's and example with loop in it :
+
+<audio
+  src="lofi.mp3"
+  loop
+  controls
+></audio>
+
+or the "muted" attribute that will keep the audio muted until the user click on the volume logo :
+
+<audio
+  src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+  loop
+  controls
+  muted
+></audio>
+
+There is also a possibility of instance where some browser don't support some audio format, that's why we can use several src like the example bellow with the 
+<source src> tag :
+
+<audio controls>
+  <source src="audio.ogg" type="audio/ogg" />
+  <source src="audio.wav" type="audio/wav" />
+  <source src="audio.mp3" type="audio/mpeg" />
+</audio>
+
+
+all we just saw alwo work in the <video></video> tag.
+exept we can control the width , height and add a poster (preview of the video or while downloading) like so :
+
+<video
+  controls
+  width="400"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+>
+  <source
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    type="video/mp4"
+  />
+  <source
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.webm"
+    type="video/webm"
+  />
+  Your browser does not support the video tag.
+</video>
+
+
+
+/!\ General note to remember :
+
+Common attributes
+--------------------------------
+
+src
+Location of the media.
+
+controls
+Shows the media player.
+
+loop
+Repeats the media.
+
+muted
+Starts muted.
+
+autoplay
+Attempts to play automatically.
+
+width
+Video only.
+
+height
+Video only.
+
+poster
+Video only.

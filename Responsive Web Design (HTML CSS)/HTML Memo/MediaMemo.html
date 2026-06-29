@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Test in HTML</title>
+</head>
+<body>
+    <!--
+    /!\ Important :
+
+- JPEG/JPG : photographs
+- PNG : transparent images
+- GIF : simple animations
+- SVG : scalable vector graphics
+- WEBP : modern compressed format
+    -->
+    <section id="test_area">
+
+        <!--Audio example-->
+        <h2>Audio</h2>
+        <audio src="randomnoise.mp3" controls preload="metadata"> <!-- preload="metadata" (load the information of the file)/ none (load nothing) / auto (load everything)-->
+            Your browser does not support this audio.
+        </audio>
+        <br>
+
+        <!--Image example-->
+        <figure>
+        <h2>Image and Gif</h2>
+        <img src="/Responsive Web Design (HTML CSS)/HTML Test/img/miku_placeholder.gif" alt="Animated placeholder of Miku"
+        loading="lazy"> <!-- The lazy loading mean the picture won't load until the user reach it / scroll to it. -->
+        <figcaption><strong>Miku</strong> being an example of a local gif file in a img tag.</figcaption>
+        </figure>
+
+        <figure>
+        <img src="https://picsum.photos/300" alt="online pic">
+        <figcaption>example of an online (external) pic.</figcaption>
+        </figure>
+        <br>
+
+        <!--Video example-->
+        <h2>Video player</h2>
+        <video
+             width="640"
+            loop
+            controls
+            muted
+            poster="past-event2.jpg"
+            >     
+            <source
+              src="what-is-the-map-method-and-how-does-it-work.mp4"
+              type="video/mp4"
+            >
+            <source
+              src="mapmethod.webm"
+              type="video/webm"
+            >
+            <source
+              src="mapmethod.ogg"
+              type="video/ogg"
+            >
+            <source
+            src="mapmethod.mov"
+            type="video/quicktime">
+        </video>
+        <br>
+
+        <!--SVG example-->
+        <h2>SVG</h2>
+        <svg width="220" height="120">
+
+    <circle
+        cx="60"
+        cy="60"
+        r="40"
+        fill="hotpink"/>
+
+    <rect
+        x="130"
+        y="20"
+        width="60"
+        height="80"
+        fill="skyblue"/>
+
+</svg>
+    <br>
+    </section>
+
+    <!-- We test attribute there -->
+    <section id="sandbox">
+        <h1>/////////////////////////////////////////////////////////</h1>
+        <h2>Attribute sandbox</h2>
+    </section>
+</body>
+</html>
