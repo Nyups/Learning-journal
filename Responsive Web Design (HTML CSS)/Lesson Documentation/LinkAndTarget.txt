@@ -1,0 +1,40 @@
+What Are the Different Target Attribute Types, and How Do They Work :
+
+Target attribute define the behavior of the link once vlivked on it.
+There is four possible value for the target attribute, those being :
+- _self : It's the default value and will open the link in the current page. (if in an iframe it will only load the link in the said iframe)
+
+- _blank : Will open the link in a new tabs, (Note: Some user configure their browser to not open a new windows.)
+
+-_parent : Opens the link in the parent page. If the current page is inside an iframe, the page containing that iframe will load the link.
+
+Main Page
+┌──────────────────────────┐
+│                         │
+│  <iframe>               │
+│  ┌───────────────────┐  │
+│  │ Current page      │  │
+│  │                   │  │
+│  │ <a target="_parent"> │
+│  └───────────────────┘  │
+│                         │
+└──────────────────────────┘
+
+-_top : Opens the link in the top-level browsing context. It replaces the entire page, ignoring any iframes.
+
+Browser Tab
+┌───────────────────────────────┐  ← _top
+│                               │
+│  Main Page                    │
+│                               │
+│  ┌─────────────────────────┐  │
+│  │ iframe                  │  │  ← _parent (if there's only one iframe)
+│  │                         │  │
+│  │ Current Page            │  │  ← _self
+│  │                         │  │
+│  └─────────────────────────┘  │
+│                               │
+└───────────────────────────────┘
+
+
+<a href="https://freecodecamp.org" target="_blank">Visit freeCodeCamp</a>
