@@ -7,3 +7,8 @@ The semantique meaning of a <p> element, for example, is "Paragraph".
 Using correct semantic element can improve your development experience,
 but also, using semantic HTML can improve your search ranking in the infamous
 "SEO" [Search Engine Optimisation].
+
+Presentational Vs Semantic?
+
+Most presentational HTML are deprecated / obselete. It was used to style directly in the
+HTML code. Nowadays we must use CSS to style or move elements.

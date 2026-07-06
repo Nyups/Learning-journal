@@ -1,0 +1,37 @@
+When Should You Use the Emphasis Element Over the Idiomatic Text Element :
+
+
+These element are very closely related to the concept of presentational and semantic HTML.
+The Idiomatic text element <i> was originally used for presentational purpose.
+It display the text in italics but is now frequently used for highlighting alternative
+voice or mood.
+An example would be :
+<p>There is a certain <i lang="fr">je ne sais quoi</i> in the air.</p>
+
+The lang attribute is used to specify the language of the content (french).
+
+An Semantic alternative to empathis the importance of a text would be <em> </em>
+liek the example bellow :
+<p>
+  Never give up on <em>your</em> dreams.
+</p>
+
+
+The <strong> </strong> element :
+
+<strong> is a semantic HTML element that empathizes text that are crucial or urgent.
+An example would be :
+<p>
+  <strong>Warning:</strong> This product may cause allergic reactions.
+</p>
+
+
+The <b> </b> element or "bring attention" is commonly used to highlight keyword in summaries
+or product name in reviews, usually displayed in "boldface" by most browser.
+An example would be :
+<p>
+  We tested several products, including the <b>SuperSound 3000</b> for audio
+  quality, the <b>QuickCharge Pro</b> for fast charging, and the
+  <b>EcoClean Vacuum</b> for cleaning. The first two performed well, but the
+  <b>EcoClean Vacuum</b> did not meet expectations.
+</p>
