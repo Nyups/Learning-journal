@@ -1,0 +1,9 @@
+Should You Care About Semantic HTML :
+
+
+The semantic meaning of an element refer to what speacial information that element convey.
+The semantique meaning of a <p> element, for example, is "Paragraph".
+
+Using correct semantic element can improve your development experience,
+but also, using semantic HTML can improve your search ranking in the infamous
+"SEO" [Search Engine Optimisation].
