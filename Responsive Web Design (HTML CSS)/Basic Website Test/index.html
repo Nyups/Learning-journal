@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="twin">
+    <h2><span class="twin_name">Momoi</span> and <span class="twin_name">Midori</span></h2>
+    <img src="assets/twin_template.png" class="picture" alt="Twin from that one game">
+    <p><span class="twin_name_02">Momoi</span> and <span class="twin_name_02">Midori</span> are both part of the <em>Game development</em><br>
+    in the <em class="science">Millenium Science School</em>.<br>
+    While this club have the reputation to be "full of weirdo"<br>
+    It's actually one of the most relaxed and laid back club in the school.</p>
+    </section>
+</body>
+<style>
+    
+    body {
+        background-color: darkcyan;
+    }
+
+    h2 {
+        font-family: "Silkscreen", sans-serif;
+    }
+    .twin_name {
+        color: white;
+    }
+
+    .twin_name_02 {
+        color: yellow;
+        font-size: larger;
+    }
+
+    p {
+        color: black;
+        font-family: "Silkscreen", sans-serif;
+        text-shadow: white 2px;
+    }
+
+    .science {
+        color: white;
+    }
+
+    .twin {
+        width: 400px;
+        border: 3px solid white;
+        
+        border-radius: 15px;
+        padding: 15px;
+        margin: 5px auto;
+        text-align: center;
+        box-shadow: 5px 5px 10px 0px black;
+
+        background: linear-gradient(
+            127deg,
+            #ff588c 49%,
+            white 49%,
+            white 51%,
+            #52e265 49%
+        );
+    }
+
+    .twin:hover {
+        transform: scale(1.05);
+    }
+
+    .picture {
+        display: block;
+        margin: 1px auto;
+        width: 350px;
+        border: 2px solid white;
+    }
+</style>
+</html>
