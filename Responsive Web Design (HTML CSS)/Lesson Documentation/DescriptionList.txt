@@ -1,0 +1,18 @@
+DESCRIPTION LIST AND WHEN SHOULD WE USE THEM :
+
+Description list are perfect for presenting terms and efinition in an organized easy to read format.
+Some example being Glossary and dictionary.
+
+An example in html would be :
+
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets</dd>
+</dl>
+
+MEMO :
+- <dl> Description List (the list opener)
+- <dt> Description Term (the term or item we want to describe)
+- <dd> Description Details (the description of the said item)
