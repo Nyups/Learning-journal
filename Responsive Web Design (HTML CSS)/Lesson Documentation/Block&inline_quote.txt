@@ -1,0 +1,51 @@
+How do block and inline quotes work in HTML :
+
+Quoted element are used to distinguish quoted text from the surrounding content.
+
+We should use the block quotation element :
+<blockquote cite="source url"> </blockquote>
+for representing a section quoted from another source.
+If the source of the quote have an adress we can use the "cite" attribute to cite it.
+
+
+An example of blockquote would be :
+
+<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+  "Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?"
+</blockquote>
+
+
+Or another example with multiple paragraph :
+
+<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+  <p>Build your projects. Show them to your friends. Build projects for your friends.</p>
+  <p>Build your network. Help the people you meet along the way. What goes around comes around. You'll get what's coming to you.</p>   
+  <p>It is not too late. Life is long.</p>
+  <p>You will look back on this moment years from now and be glad you made a move.</p>
+</blockquote>
+
+All the paragraph are contained in the same blockquote, so they are part of the same
+quotation.
+
+
+If we want to attribute the source visually, we can use "cite" <cite> outside of the block quotation.
+This one is different from the "cite" attribute in <blockquote>.
+
+We can use the <cite></cite> to mark up a title of a referenced creative work like a book article,
+a song, a film, a website, search paper ect...
+
+
+An example of the <cite></cite> attribute would be :
+
+<div>
+  <blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+    Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?
+  </blockquote>
+  <p>—Quincy Larson, <cite>How to Learn to Code and Get a Developer Job [Full Book].</cite></p>
+</div>
+
+
+Additional memo : the <q> </q>
+
+The "q" element(quote) will add... quote (wow) between the text it surround.
+We can also use the "cite" attribute in it to attribute the source of the said quote.
