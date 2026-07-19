@@ -1,0 +1,32 @@
+How to represent Computer Code in HTML :
+
+the inline <code></code> is used to represent short snippets of code inside text.
+common use would be to display code (wow!) in technical articles or documentation page.
+For exmaple to show a CSS code snippet we would do :
+<p>
+  To set the text color to blue in CSS, use the following code:
+  <code>color: blue;</code>
+</p>
+
+The browser will apply the default style for content inside the <code> element, called "monospaced font".
+
+
+
+The preformatted <pre></pre> is used to represent preformatted text.
+Another example would be :
+<pre>
+  <code>
+    body {
+      color: red;
+    }
+  </code>
+</pre>
+
+When using <pre> we have to be mindful of spacind because it will display exactly as written inside the HTML document.
+If we need to display longer code snipepts, then we will need to use the <pre> and <code> elements.
+
+
+
+/!\ TO DO :
+-Make a big HTML memo page about everything we learned so far and style it to make it pretty and easy to learn.
+-Keep it on github for other people learning (so cool).

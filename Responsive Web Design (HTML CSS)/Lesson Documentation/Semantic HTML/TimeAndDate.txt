@@ -1,0 +1,23 @@
+How to display Time and Date :
+
+We use the <time> element.
+An example would be :
+"<p>The reservations are for <time datetime="20:00">20:00 </time></p>"
+
+The "datetime" attribute is used to translate classic date and time into machine-readable format.
+/!\ : It help with search engine result.
+
+The value used for "datetime" must be a valide years, month , time, local date, global date or a valid duration string.
+
+
+Another example of using the time element tu represent a particular date would be:
+<p>
+  The graduation will be on <time datetime="2024-06-15T15:00">June 15</time>
+</p>
+
+Whenever we need to represent events , publication dates or appointments, <time> is the best element to use.
+
+
+/!\ Memo :
+ISO 8601 : International standard to represent dates and times. (yyyy-mm-ddthh:mm:ss) (year-month-day:hour:minute:second)
+The 't' in the middle of "ddthh" represent the separator between date and time.

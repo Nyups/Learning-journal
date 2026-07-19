@@ -1,0 +1,21 @@
+How to display Information like Address , number ect :
+
+The <address> element is generally where we should store our website contact section.
+An example of good <address> would be :
+
+<address>
+  <h2>Company Name</h2>
+  <p>
+    1234 Elm Street<br />
+    Springfield, IL 62701<br />
+    United States
+  </p>
+  <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>
+  <p>Email: <a href="mailto:contact@company.com">contact@company.com</a></p>
+</address>
+
+Attribute used MEMO :
+
+-tel:+  : Is used to create a clickable link to initiate a phone call on device that support it. that's why it is stored in an <a href>
+-mailto : Same as "tel:+" but for mail. It will create a new email within the users mail app directed toward the mentionned mail.
+-

@@ -1,0 +1,11 @@
+How to display Abbreviations in HTML.
+
+There are two forms of Abbreviations : Acronyms (L.O.V Level Of Violence (Thanks Undertale)) and Initialisms Dr (Doctor).
+
+An example in HTML would look like :
+<p><abbr>HTML</abbr> is the foundation of the web.</p>
+
+
+If we want to help the user understand what this initialism means, we can show it's full form with the "tittle" attribute like so :
+<p><abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the web.</p>
+

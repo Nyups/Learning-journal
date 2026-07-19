@@ -1,0 +1,37 @@
+How to display Math Equation and Chemical Formula in HTML :
+
+The superscript element is used to display a piece of text as a superscript.
+A superscript is a symbol or letter printed above the normal line of text.
+
+
+
+An example using Superscript would look like this :
+<p>2<sup>2</sup> (2 squared) is 4.</p>
+^
+In this example the number 2 is wrapped in <sup></sup> tags to represent the Superscript inside
+the paragraph.
+ In the preview window (see the HTML example), you will see that the second number 2 is 
+ smaller and slightly higher than the first number 2.
+
+
+
+ Common use for the Superscript element would include exponents, **superior lettering** and **ordinal
+ numbers**.
+ 
+An example using the Superscript element for superior lettering would be :
+<p>
+  Monseigneur is often written as <strong>M<sup>gr</sup></strong>.
+</p>
+
+
+Or another example of Superscript element to show the chemical representation of Carbone dioxide:
+<p>CO<sub>2</sub></p>
+
+
+/!\ Important part /!\ :
+-It is important to note that the superscript element should only be used for typographical reasons
+-To represent chemical equations inside HTML, you would use the subscript element.
+-<sub> : The number wrapped in a <sub> tag illustrate that the character should be a subscript (mini version)
+
+-**Ordinal number** :  is a number that tells the position of something in a list.
+-**Superior lettering** : is a lower-case letter placed above the baseline and made smaller than ordinary text.
