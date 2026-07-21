@@ -1,0 +1,33 @@
+What are U, S , And Ruby Elements used for and how do they work :
+
+The unarticulated annotation element, or <u> </u> is used to represent inline text.
+An example using the <u> element would look like :
+<p>
+  You can use the unarticulated annotation element to highlight
+  <u>inccccort</u> <u>spling</u> <u>issses</u>.
+</p>
+
+In the example above, we misspelled "incorrect","spelling" and "issues".
+The default styling of the <u> elements is a black underline underneath the text.
+
+
+
+The strikethrough element <s> </s> should be used ti represent text that are no longer accurate or relevent.
+an example of using <s> element would be :
+<p><s>Tomorrow's hike will be meeting at noon.</s></p>
+
+<p>Due to unforeseen weather conditions, the hike has been canceled.</p>
+
+In this example the sentence between <s> is crossed out because the hike was canceled due to weather reason.
+
+The <s> element should never be used just to show change to a document, more appropriate element would be the
+delete text element or inserted text element.
+
+
+The <ruby></ruby> element represent small text shown above or below the main text.
+Typiclaly used to show pronunciation of east Asian characters. Here is an example of using the <ruby> element.
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+
+The <rp> element, or RubyFallback parenthesis element is used as fallback for browser lacking support for displaying ruby annotations.
+The <rt> element, or RubyText element is used to indicate text for the Ruby annotation. Usually used for pronunciation or translation details
+in East asian typography.
