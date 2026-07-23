@@ -15,7 +15,7 @@
         <pre>
             <code>
                 &lt;header&gt;
-                &lt;h1&gt;Header section&lt;/h1&gt;
+                    &lt;h1&gt;Header section&lt;/h1&gt;
                 &lt;/header&gt;
             </code>
         </pre>
@@ -25,28 +25,30 @@
 
     <!-- Main element : Used to contain the main content of the web page. -->
      <main>
+        <section id="main">
         <h1>Main section</h1>
         <p>We are in the Main element, used to contain the main content of a Web page</p>
         <p>a Main element code look like this :</p>
         <pre>
             <code>
                 &lt;main&gt;
-                &lt;h1&gt;Main section&lt;/h1&gt;
+                    &lt;h1&gt;Main section&lt;/h1&gt;
                 &lt;/main&gt;
             </code>
         </pre>
+    </section>
     <br>
 ------------------------------------------------------------------------------------------------------------------
 
         <!-- Section element : used to divide up content into smaller section. -->
-         <section>
+         <section id="section">
             <h1>Section element</h1>
             <p>We now are in a Section element, used to divide content into smaller section.</p>
             <p>A Section element code look like this :</p>
             <pre>
                 <code>
                     &lt;section&gt;
-                    &lt;h1&gt;Some title&lt;/h1&gt;
+                        &lt;h1&gt;Some title&lt;/h1&gt;
                     &lt;/section&gt;
                 </code>
             </pre>
@@ -54,7 +56,7 @@
             <pre>
                 <code>
                     &lt;section id="part-01" class="section"&gt;
-                    &lt;h1&gt;Some title&lt;/h1&gt;
+                        &lt;h1&gt;Some title&lt;/h1&gt;
                     &lt;/section&gt;
                 </code>
             </pre>
@@ -63,6 +65,120 @@
 ------------------------------------------------------------------------------------------------------------------
 
         <!-- Navigation Element: Used to represent a section with navigation links. -->
+         <section id="nav">
+            <h1>Nav element</h1>
+            <p>This is a nav element. A section with navigation link.</p>
+            <p>A nav element code would look like this</p>
+            <pre>
+                <code>
+                    &lt;nav&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;nav 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;nav 2&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                </code>
+            </pre>
+            <p>And display like this :</p>
+            <nav>
+                <ul>
+                    <li><a href="#Id-or-link-here">Nav 1</a></li>
+                    <li><a href="#Id-or-link-here">Nav 2</a></li>
+                </ul>
+            </nav>
+         </section>
+    <br>
+------------------------------------------------------------------------------------------------------------------
+
+        <!-- Figure / Figcaption Element : Used to contain Illustration and Diagrams. -->
+         <section id="figure">
+            <h1>Figure element and Figcaption</h1>
+            <p>The Figure element is used to contain Illustration and Diagram.</p>
+            <p>While the Figcaption element is used to add information about the said Figure.
+                <br> A figure element code would look like this :
+            </p>
+            <pre>
+                <code>
+                    &lt;figure&gt;
+                        &lt;img
+                        src=".your/image/here"
+                        alt="image description" 
+                        /&gt;
+                        &lt;figcaption&gt;Fun fact about the image&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                </code>
+            </pre>
+            <p>And display like this :</p>
+            <figure>
+                <img src="./asset/placeholder.jpg" alt="funny placeholder"
+                width="300"/>
+            </figure>
+            <figcaption>(figcaption) : Now <strong>This</strong> is a funny pic.</figcaption>
+         </section>
+<br>
+------------------------------------------------------------------------------------------------------------------
+
+        <!-- Text Elements : Text modification and Layout. -->
+         <section id="text">
+            <ul>
+            <h1>Text Elements</h1>
+            <p>Bellow are some of the text element / modification used in HTML :</p>
+            <br>
+
+            <li>
+            <h2>The em element</h2>
+            <p>The em element mark the text as stress (italic) emphasis. <br>
+            an em element code would look like this :</p>
+            <pre>
+                <code>
+&lt;p&gt;I am quite certain that this was &lt;em&gt;your&lt;/em&gt; doing.&lt;/p&gt;
+                </code>
+            </pre>
+            <p>Which will display like this : <br>
+            "I am quite certain that it was <em>your</em> doing."</p>
+            </li>
+
+            <li>
+                <h2>Idiomatic Text Element</h2>
+                <p>the Idiomatic element is used to highlight alternative voice or mood,<br>
+                idiomatic,technical term or thoughts.</p>
+                <p>An Idiomatic code example would look like this :</p>
+                <pre>
+                    <code>
+&lt;p&gt;Like the japanese always say : &lt;i lang="jp"&gt; がんばる (頑張る) &lt;/i&gt; and do your best!&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>which would display as : <br>
+                "Like the japanese always say : <i lang="jp">がんばる (頑張る)</i> and do your best!"</p>
+                <p>The "lang" attribute inside is used to specify the language of the content. in our case , Japanese.</p>
+            </li>
+
+            <li>
+                <h2>Strong and B element</h2>
+                <p>-The P element marks text as strong importance. <br>
+                -The B element is used to bring attention for text that have low importance fot the meaning of the content.</p>
+                <p>An example of Strong and B element would be :</p>
+                <pre>
+                    <code>
+// Strong example:
+&lt;p&gt;
+    &lt;strong&gt;Warning:&lt;/strong&gt; I have peanuts allergy !
+&lt;/p&gt;
+
+// B example
+&lt;p&gt;
+    Don't you hate how &lt;b&gt;Chips&lt;/b&gt; taste like nothing?
+&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>which would display as : <br>
+                <strong>Warning:</strong> I have peanuts allergy ! <br>
+                Don't you hate how <b>Chips</b> taste like nothing?</p>
+                <p>... it's the same isn't it?</p>
+            </li>
+            </ul>
+            
+         </section>
      </main>
 </body>
 <style>
