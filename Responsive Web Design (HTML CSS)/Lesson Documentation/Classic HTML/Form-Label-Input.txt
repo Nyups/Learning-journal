@@ -1,0 +1,65 @@
+How do Form, Labels and Inputs Work in HTML.
+
+The <form> element in HTML is used to gather user information such as :
+Name, email and addresses.
+
+A form element without input would look like this :
+
+<form action="your-url-here">
+    <!-- input go there -->
+</form>
+
+The action attribute specifies where the form data will be sent upon submission.
+To collect the said information we use <input>.
+
+A form element with input would look like this :
+
+<form action="">
+    <input type="text" />
+</form>
+
+<input> does not have a closing tag.
+The type attribute define the data type expected from the user, in this case, Text.
+
+
+
+To add a label for the input, we should use the <label> element.
+
+An example of form using a label would look like this :
+
+<form action="">
+    <label>
+    Name:
+    <input type="text" />
+    </label>
+</form>
+
+By nesting an Input inside a Label element, We create an implicit association between the
+Label and the Input field.
+
+
+To explicitly associate a Label with an Input, we can use the "for" attribute.
+An example of using the "for" attribute would look like this :
+
+<form action="">
+    <label for="email"> Email Address: </label>
+    <input type="email" id="email" />
+</form>
+
+When  using an ecplicite association, the value for the "for" attribute and "id" need
+to be the same. In the example above, they're both "email".
+
+
+If we want to show additional hints (In case the user may be slow...),
+we can use the "placeholder" attribute.
+An example using "placeholder" would look like this :
+
+<form action="">
+    <label for="email">
+
+
+
+
+
+
+
