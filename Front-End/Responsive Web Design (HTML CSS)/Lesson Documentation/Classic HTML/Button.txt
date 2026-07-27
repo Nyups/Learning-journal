@@ -1,0 +1,20 @@
+What Are the Different Types of Buttons, and When Should we Use Them :
+
+
+The <button></button> Element :
+-----------------------------------------------------------------------------------------------------------------------
+The button element is used to perform a particular action when Clicked on.
+An example of a simple <button> element would be:
+-----------------------------------------------------------------------------------------------------------------------
+<button>Start Game</button>
+-----------------------------------------------------------------------------------------------------------------------
+
+Other example of the <button> element include submitting form, showing a modal or toggling a side
+menu open and closed.
+The <button> element has a "type" attribute which control the behavior of the said button when activated.
+The different attribute for the <button> element are :
+-----------------------------------------------------------------------------------------------------------------------
+-<button type="button"></button> : By default it will not do anything be we can add Js code to make it interactive.
+-<button type="submit"></button> : Is used to send the data (of a form for example) to the server.
+-<button type="reset"></button>  : Is used to reset the input field from a form.
+-----------------------------------------------------------------------------------------------------------------------

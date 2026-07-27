@@ -1,0 +1,63 @@
+What Is Client-Side Form Validation in HTML Forms :
+
+Client-side:
+-----------------------------------------------------------------------------------------------------------------------
+The term "Client-side" refers to everything that happen on the user's devices, like the part of the app we directly 
+interact with.
+This include Layout, Design and any interactive part.
+-----------------------------------------------------------------------------------------------------------------------
+
+Server-side:
+-----------------------------------------------------------------------------------------------------------------------
+The term "Server-side" refer to everything that happen on the server, The computer or system that host the website
+or app.
+This include processing data, running application and handling request that come from the user's device.
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+Form Validation:
+
+
+"Required" attribute in input:
+-----------------------------------------------------------------------------------------------------------------------
+One example of built in form validation is the "required" attribute in inputs.
+It specify the users that they need to fill out that portion of the form before it get submitted.
+-----------------------------------------------------------------------------------------------------------------------
+Example :
+-----------------------------------------------------------------------------------------------------------------------
+<form action="">
+  <label for="email">Email Address (Required field):</label>
+  <input required type="email" name="email" id="email" />
+  <button type="submit">Submit Form</button>
+</form>
+-----------------------------------------------------------------------------------------------------------------------
+
+
+"minlength" and "maxlength":
+-----------------------------------------------------------------------------------------------------------------------
+"minlength" and "maxlength" are self explanatory. [Minimum Length] & [Maximum length].
+-----------------------------------------------------------------------------------------------------------------------
+Example :
+-----------------------------------------------------------------------------------------------------------------------
+<form action>
+<label for="email">Email adress (Required field):</label>
+<input
+required
+type="email"
+name="email" 
+id="email"   
+minlength="4"
+maxlength="64"
+/>
+<button type="submit">Submit Form</button>
+</form>
+-----------------------------------------------------------------------------------------------------------------------
+
+Attribute Memo :
+-----------------------------------------------------------------------------------------------------------------------
+-label : Text the user click.
+-for   : Connect the label to an ID?
+-id    : Identifier (CSS,Js,Labels).
+-name  : Name of the data sent to the server.
+-----------------------------------------------------------------------------------------------------------------------
