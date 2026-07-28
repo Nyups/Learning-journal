@@ -24,7 +24,6 @@ The type attribute define the data type expected from the user, in this case, Te
 
 
 
-
 -----------------------------------------------------------------------------------------------------------------------
 To add a label for the input, we should use the <label> element.
 

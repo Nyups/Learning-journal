@@ -1,0 +1,12 @@
+The Different Form States
+
+
+Forms control :
+-----------------------------------------------------------------------------------------------------------------------
+Forms control, like inputs, can be in different stages or condition like a "focused" state, "readonly" state or
+"disabled" state.
+-Focused  : Considered the default state, this is what email input look like when it's first rendered on the page.
+-Readonly : Self explanatory, for demo purpose and not editable.
+-Disabled : This state show the user that the form cannot be focused or activated
+-----------------------------------------------------------------------------------------------------------------------
+
