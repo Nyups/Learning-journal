@@ -47,8 +47,8 @@ required
 type="email"
 name="email" 
 id="email"   
-minlength="4"
-maxlength="64"
+minlength="4"  // can also be typed as : min="4"
+maxlength="64" // can also be typed as : max="64"
 />
 <button type="submit">Submit Form</button>
 </form>
@@ -60,4 +60,6 @@ Attribute Memo :
 -for   : Connect the label to an ID?
 -id    : Identifier (CSS,Js,Labels).
 -name  : Name of the data sent to the server.
+-size  : This define the number of characters that should be visible as the user type into the input.
+-value : The actual data sent if the option is selected (in radio form)
 -----------------------------------------------------------------------------------------------------------------------

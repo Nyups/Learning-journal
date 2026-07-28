@@ -1,0 +1,88 @@
+TYPE OF FORMS
+-----------------------------------------------------------------------------------------------------------------------
+
+
+FIELDSET
+-----------------------------------------------------------------------------------------------------------------------
+A fieldset is an already styled type of form we can use.
+A code example would be :
+-----------------------------------------------------------------------------------------------------------------------
+      <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+        <fieldset>
+            <legend>Personal Information</legend>          
+        </fieldset>
+      </form>
+-----------------------------------------------------------------------------------------------------------------------
+and it would look like :
+-----------------------------------------------------------------------------------------------------------------------
+
+|--Personal information-----------------------------------------------|
+|_____________________________________________________________________|
+
+-----------------------------------------------------------------------------------------------------------------------
+the <legend> is used to describe the field the forw will be used for, in this case, Personal information.
+-----------------------------------------------------------------------------------------------------------------------
+
+
+RADIO
+-----------------------------------------------------------------------------------------------------------------------
+  If we want an user to select one option from w list of option, We can use a set of "radio" button.
+  A code exampel would be :
+-----------------------------------------------------------------------------------------------------------------------
+<fieldset>
+  <legend>Do you like Cookies?</legend>
+   <input type="radio" id="yes" name="first-time">
+   <label for="yes">Yes</label>
+   <input type="radio" id="no" name="first-time">
+   <label for="no">No</label>
+</fieldset>
+-----------------------------------------------------------------------------------------------------------------------
+In this example the radio button are grouped together by using the same name attribute value(in this case "first-time").
+
+
+
+CHECKBOX
+-----------------------------------------------------------------------------------------------------------------------
+Whe you want a user to select multiple option from a list, we can use checkbox.
+A code example would be :
+-----------------------------------------------------------------------------------------------------------------------
+<fieldset>
+  <legend>Food Options</legend>
+  <input checked type="checkbox" id="pizza" name="food" value="pizza">
+  <label for="pizza">Pizza</label>
+  <input type="checkbox" id="burger" name="food" value="burger">
+  <label for="burger">Burger</label>
+</fieldset>
+-----------------------------------------------------------------------------------------------------------------------
+To make a checkbox checked by default we can use the attribute "checked".
+
+
+
+SELECT AND OPTION
+-----------------------------------------------------------------------------------------------------------------------
+When we want a user to make selections from a dropdown menu, we can use the <select> and <option> elements
+to create a dropdown for the different said option.
+A code example would be :
+-----------------------------------------------------------------------------------------------------------------------
+<label for="city">Choose a City: </label>
+<select id="city" name="city">
+  <option value="new-york">New York</option>
+  <option selected value="los-angeles">Los Angeles</option> // selected attribute used here
+  <option value="chicago">Chicago</option>
+  <option value="miami">Miami</option>
+</select>
+-----------------------------------------------------------------------------------------------------------------------
+To make an option selected by default, we can add the selected attribute to the element we want to be selected.
+
+
+
+TEXT AREA
+-----------------------------------------------------------------------------------------------------------------------
+If we want users to have more space to write their comment, we can use a <textarea> element.
+It's a multi-line text input control that allows users to enter text that are longer than a single line.
+A code example would be:
+-----------------------------------------------------------------------------------------------------------------------
+<textarea id="comments" name="comments" rows="4" cols="50"> </textarea>
+-----------------------------------------------------------------------------------------------------------------------
+"Rows" attribute : Used to specify the visible height of the text area.
+"Cols" attribute : Used to specify the visible width of the text area.
