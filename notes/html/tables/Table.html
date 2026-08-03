@@ -3,9 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Table example</title>
 </head>
 <body>
-    
+    <!-- <table> is needed to create table (wow) -->
+<table>
+    <!-- <Caption> can be used in table too as a title and will be on top of the table by default. -->
+    <caption>Weekly schedule</caption>
+    <!-- <thead> : first row of the table -->
+  <thead>
+    <!-- <tr> : Table Row, every <th> added in it will be added from left to right. -->
+    <tr>
+      <th>Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+    </tr>
+  </thead>
+
+    <!-- <tbody> : the body of the table (middle part) -->
+  <tbody>
+    <tr>
+      <th>09:00</th>
+      <td>HTML</td>
+      <td>CSS</td>
+      <td>JavaScript</td>
+      <td>React</td>
+      <td>Projects</td>
+    </tr>
+
+    <tr>
+      <th>10:00</th>
+      <td>Exercise</td>
+      <td>Exercise</td>
+      <td>Exercise</td>
+      <td>Exercise</td>
+      <td>Exercise</td>
+    </tr>
+
+    <tr>
+      <th>11:00</th>
+      <td>Japanese</td>
+      <td>Japanese</td>
+      <td>Japanese</td>
+      <td>Japanese</td>
+      <td>Japanese</td>
+    </tr>
+  </tbody>
+
+    <!-- <tfoot> : Bottom of the table, usually used to show final result of a table calculation-->
+  <tfoot>
+    <tr>
+        <th>final</th>
+        <td>bleblablu</td>
+        <td>bleblablu</td>
+        <td>bleblablu</td>
+        <td>bleblablu</td>
+        <td>bleblablu</td>
+    </tr>
+  </tfoot>
+</table>
+
+<h2>table exercise</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Publication Year</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+        <td>Salami</td>
+        <td>Italian man</td>
+        <td>Cuisine</td>
+        <td>2026</td>
+        </tr>
+
+        <tr>
+        <td>Salami</td>
+        <td>Italian man</td>
+        <td>Cuisine</td>
+        <td>2026</td>
+        </tr>
+
+        <tr>
+        <td>Salami</td>
+        <td>Italian man</td>
+        <td>Cuisine</td>
+        <td>2026</td>
+        </tr>
+
+        <tr>
+        <td>Salami</td>
+        <td>Italian man</td>
+        <td>Cuisine</td>
+        <td>2026</td>
+        </tr>
+
+        <tr>
+        <td>Salami</td>
+        <td>Italian man</td>
+        <td>Cuisine</td>
+        <td>2026</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="4">Total Books : 30</td>
+        </tr>
+    </tfoot>
+</table>
+
 </body>
 </html>

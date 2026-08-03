@@ -1,0 +1,269 @@
+========================================
+HTML Forms Cheat Sheet
+========================================
+
+====================================================
+<form> - Create a Form
+====================================================
+
+The <form> element is used to collect user input.
+
+Attributes:
+- action: URL where the form data will be sent.
+- method: HTTP method used to send the data.
+- GET  -> Appends data to the URL. Good for searches and non-sensitive data.
+- POST -> Sends data inside the request body. Used for login forms, registrations, etc.
+
+Example:
+
+<form action="/submit" method="post">
+  <!-- Form elements -->
+</form>
+
+====================================================
+<input> - User Input
+====================================================
+
+The <input> element creates different types of input fields.
+
+Common types:
+
+type="text"       Text input
+type="email"      Email address
+type="password"   Password field
+type="number"     Numeric input
+type="radio"      Radio button
+type="checkbox"   Checkbox
+type="file"       File upload
+type="date"       Date picker
+type="color"      Color picker
+type="range"      Slider
+type="submit"     Submit button
+type="reset"      Reset form
+type="button"     Generic button
+
+====================================================
+Useful Input Attributes
+====================================================
+
+id
+- Unique identifier.
+- Used by labels.
+
+name
+- The key used when form data is submitted.
+- Radio buttons with the same name become one selectable group.
+
+placeholder
+- Displays helper text inside the input.
+
+value
+- Default value.
+- Also sets the text for button inputs.
+
+required
+- User must fill out the field.
+
+disabled
+- Cannot be edited or submitted.
+
+readonly
+- Can be seen but not modified.
+
+size
+- Visible width of the input.
+
+min
+- Minimum numeric value.
+
+max
+- Maximum numeric value.
+
+minlength
+- Minimum number of characters.
+
+maxlength
+- Maximum number of characters.
+
+====================================================
+Example Inputs
+====================================================
+
+<!-- Text -->
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  placeholder="John Doe"
+  size="20"
+  minlength="3"
+  maxlength="30"
+  required
+/>
+
+<!-- Number -->
+
+<input
+  type="number"
+  id="age"
+  name="age"
+  min="18"
+  max="99"
+/>
+
+<!-- Button -->
+
+<input type="button" value="Click Me" />
+
+====================================================
+<label> - Input Labels
+====================================================
+
+Labels improve usability and accessibility.
+
+There are two ways to associate a label with an input.
+
+----------------------------------------------------
+1. Implicit Association
+----------------------------------------------------
+
+<label>
+  Full Name
+  <input type="text">
+</label>
+
+The input is placed inside the label.
+
+----------------------------------------------------
+2. Explicit Association (Recommended)
+----------------------------------------------------
+
+<label for="email">
+  Email Address
+</label>
+
+<input
+  id="email"
+  type="email"
+>
+
+The label's "for" attribute must match the input's "id".
+
+====================================================
+<button>
+====================================================
+
+Creates a clickable button.
+
+Types:
+
+<button type="submit">
+  Submit
+</button>
+
+Submits the form.
+
+<button type="reset">
+  Reset
+</button>
+
+Resets every field.
+
+<button type="button">
+  Click Me
+</button>
+
+Generic button used with JavaScript.
+
+====================================================
+<fieldset> & <legend>
+====================================================
+
+<fieldset>
+- Groups related form controls together.
+
+<legend>
+- Gives the group a title.
+
+Example:
+
+<fieldset>
+
+  <legend>Favorite Language</legend>
+
+  <label for="html">HTML</label>
+  <input
+    id="html"
+    type="radio"
+    name="language"
+    value="html"
+  >
+
+  <label for="css">CSS</label>
+  <input
+    id="css"
+    type="radio"
+    name="language"
+    value="css"
+  >
+
+</fieldset>
+
+====================================================
+Radio Buttons
+====================================================
+
+Only ONE option can be selected.
+
+To create a radio group:
+
+- Same "name"
+- Different "value"
+
+Example:
+
+<input type="radio" name="pet" value="cat">
+<input type="radio" name="pet" value="dog">
+
+====================================================
+Checkboxes
+====================================================
+
+Multiple options can be selected.
+
+Each checkbox usually has:
+- id
+- name
+- value
+
+Example:
+
+<input type="checkbox" name="music" value="music">
+<input type="checkbox" name="games" value="games">
+
+====================================================
+Focus State
+====================================================
+
+An element is in its focused state when the user selects it.
+
+Example CSS:
+
+input:focus {
+  outline: 2px solid blue;
+}
+
+====================================================
+Good Practices
+====================================================
+
+✔ Every input should have a label.
+✔ Use explicit labels (for + id) whenever possible.
+✔ Use placeholder for hints, NOT instead of labels.
+✔ Use fieldset and legend to group related inputs.
+✔ Use required only when necessary.
+✔ Use GET for searches.
+✔ Use POST for sensitive or important data.
+✔ Give radio buttons the same name to create a group.
+✔ Use semantic HTML whenever possible.
