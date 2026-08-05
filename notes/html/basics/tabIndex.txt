@@ -1,0 +1,12 @@
+The value of tabindex determines how the element behaves in keyboard navigation:
+
+tabindex="0" adds the element to the natural tab order.
+
+In this example, tabbing will focus the input with tabindex="1" first, then 2, then 3, regardless of their order in the HTML.
+
+<input tabindex="2">
+<input tabindex="1">
+<input tabindex="3">
+.
+
+simply set, set the order of navigation the browser will pic when pressing the key "tab".

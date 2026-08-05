@@ -1,0 +1,547 @@
+# HTML Review Cheat Sheet
+
+---
+
+# 1. HTML Basics
+
+- **HTML (HyperText Markup Language)** = Defines the structure of a webpage.
+- HTML is made of **elements (tags)**.
+  - Most have an opening and closing tag.
+  - Example:
+    ```html
+    <p>Hello</p>
+    ```
+- **Void elements** have NO closing tag.
+  - Examples:
+    ```html
+    <img>
+    <br>
+    <hr>
+    <input>
+    ```
+- **Attributes** provide extra information.
+  ```html
+  <img src="cat.jpg" alt="Cat">
+  ```
+
+---
+
+# 2. Basic HTML Structure (Boilerplate)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+- `<!DOCTYPE html>` → HTML5 document.
+- `<html>` → Root element.
+- `<head>` → Metadata, CSS, scripts.
+- `<body>` → Visible content.
+- UTF-8 supports almost every character.
+
+---
+
+# 3. Common Elements
+
+## Headings
+
+```html
+<h1>Largest Heading</h1>
+<h6>Smallest Heading</h6>
+```
+
+Always keep hierarchy:
+
+```
+h1
+ └── h2
+      └── h3
+```
+
+Don't skip heading levels.
+
+---
+
+## Paragraph
+
+```html
+<p>Paragraph</p>
+```
+
+---
+
+## Div
+
+Generic container.
+
+```html
+<div>Content</div>
+```
+
+Has **no semantic meaning**.
+
+---
+
+# 4. IDs vs Classes
+
+## id
+
+Unique.
+
+```html
+<div id="header"></div>
+```
+
+One per page.
+
+---
+
+## class
+
+Reusable.
+
+```html
+<div class="card"></div>
+```
+
+Many elements can share the same class.
+
+---
+
+# 5. HTML Entities
+
+Special characters.
+
+```
+&amp;   &
+&lt;    <
+&gt;    >
+&quot;  "
+```
+
+---
+
+# 6. External Files
+
+CSS
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+JavaScript
+
+```html
+<script src="script.js"></script>
+```
+
+---
+
+# 7. SEO & Social
+
+Meta description
+
+```html
+<meta name="description" content="Page description">
+```
+
+Open Graph
+
+Used for social media previews.
+
+---
+
+# 8. Images & Media
+
+Replaced elements:
+
+- img
+- iframe
+- video
+
+Image formats
+
+- JPG → photos
+- PNG → transparency
+- SVG → scalable graphics
+- WebP → modern compressed images
+
+Always use appropriate licenses.
+
+---
+
+# 9. Audio & Video
+
+```html
+<audio controls></audio>
+
+<video controls></video>
+```
+
+Embed YouTube:
+
+```html
+<iframe src=""></iframe>
+```
+
+---
+
+# 10. Links & Paths
+
+Absolute path
+
+```
+https://website.com/page
+```
+
+Relative path
+
+```
+about.html
+images/logo.png
+../index.html
+./contact.html
+```
+
+Path symbols
+
+```
+/   root
+./  current folder
+../ parent folder
+```
+
+Internal link
+
+```html
+<a href="#contact">Contact</a>
+
+<section id="contact"></section>
+```
+
+Target attribute
+
+```
+_self
+_blank
+_parent
+_top
+```
+
+---
+
+# 11. Semantic HTML
+
+Use meaningful elements.
+
+```
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+```
+
+Avoid deprecated presentation tags like:
+
+```
+<center>
+<font>
+<big>
+```
+
+---
+
+# 12. Text Semantic Elements
+
+```
+<em>         emphasis
+<strong>     important
+<b>          attention only
+<i>          alternate voice / foreign words
+<code>       code
+<abbr>       abbreviation
+<blockquote> long quote
+<q>          inline quote
+<address>    contact info
+<time>       date/time
+<sup>        superscript
+<sub>        subscript
+<u>          annotation
+<ruby>       ruby text
+<s>          no longer accurate
+```
+
+Description lists
+
+```html
+<dl>
+  <dt>HTML</dt>
+  <dd>Markup language</dd>
+</dl>
+```
+
+---
+
+# 13. Forms
+
+Basic structure
+
+```html
+<form action="" method="POST">
+
+</form>
+```
+
+Methods
+
+- GET
+- POST
+
+---
+
+## Common Input Types
+
+```
+text
+email
+password
+number
+date
+radio
+checkbox
+button
+```
+
+Example
+
+```html
+<input
+  type="text"
+  name="username"
+  placeholder="John"
+  required>
+```
+
+Useful attributes
+
+```
+name
+value
+placeholder
+required
+disabled
+readonly
+min
+max
+minlength
+maxlength
+size
+```
+
+---
+
+## Labels
+
+Explicit
+
+```html
+<label for="email">Email</label>
+<input id="email">
+```
+
+Implicit
+
+```html
+<label>
+ Email
+ <input>
+</label>
+```
+
+Always associate labels with inputs.
+
+---
+
+## Buttons
+
+```html
+<button type="submit"></button>
+
+<button type="reset"></button>
+
+<button type="button"></button>
+```
+
+---
+
+## Fieldset & Legend
+
+Group related inputs.
+
+```html
+<fieldset>
+ <legend>Question</legend>
+</fieldset>
+```
+
+---
+
+## Focus State
+
+Input currently selected by user.
+
+---
+
+# 14. Tables
+
+Structure
+
+```html
+<table>
+
+<caption>
+
+<thead>
+
+<tbody>
+
+<tfoot>
+
+<tr>
+
+<th>
+
+<td>
+
+</table>
+```
+
+Important:
+
+- `th` = header
+- `td` = data
+- `tr` = row
+- `caption` = table title
+- `colspan` = merge columns
+
+---
+
+# 15. HTML Tools
+
+- HTML Validator
+- DOM Inspector
+- Browser DevTools
+
+---
+
+# 16. Accessibility (WCAG)
+
+WCAG Principles (POUR)
+
+```
+P = Perceivable
+O = Operable
+U = Understandable
+R = Robust
+```
+
+Assistive technologies
+
+- Screen readers
+- Braille keyboards
+- Screen magnifiers
+- Alternative pointing devices
+- Voice recognition
+
+Accessibility tools
+
+- Lighthouse
+- Wave
+- IBM Equal Accessibility Checker
+- axe DevTools
+
+---
+
+# 17. Accessibility Best Practices
+
+✔ Proper heading hierarchy
+
+✔ Label every input
+
+✔ Good alt text
+
+✔ Descriptive link text
+
+✔ Captions & transcripts for videos
+
+✔ Use `th` for table headers
+
+---
+
+## tabindex
+
+```
+tabindex="0"
+```
+
+Keyboard focus.
+
+Use:
+
+- `0`
+- `-1`
+
+Never use values greater than **0**.
+
+---
+
+## accesskey
+
+Creates keyboard shortcuts.
+
+```html
+accesskey="h"
+```
+
+---
+
+# 18. WAI-ARIA
+
+ARIA improves accessibility when HTML alone isn't enough.
+
+Common roles
+
+```html
+role="tab"
+
+role="menu"
+
+role="alert"
+```
+
+Useful attributes
+
+```
+aria-label
+aria-labelledby
+aria-describedby
+aria-hidden
+```
+
+- `aria-label` → give an accessible name.
+- `aria-labelledby` → use existing text as label.
+- `aria-describedby` → extra description.
+- `aria-hidden="true"` → hide decorative content from screen readers.
+
+---

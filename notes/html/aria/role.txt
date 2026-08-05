@@ -76,4 +76,55 @@ For example here's what's a <div> with the "math" ARIA role would look like :
   x<sup>2</sup> + y<sup>2</sup> = 3
 </div>
 ----------------------------------------------------------------------------------------------
+The value of the "arial-label" attribute should be a string that represent the expression.
 
+
+
+Example of widget roles :
+----------------------------------------------------------------------------------------------
+[when focusable]
+- scrollbar
+- searchbox
+- separator
+or also
+- slider
+- spinbutton
+- switch
+- tab
+- tabpanel
+- treeitem
+
+An example of searchbox would look like this :
+----------------------------------------------------------------------------------------------
+<div class="search-container" role="search">
+  <label for="searchbox" class="visually-hidden">Search</label>
+
+  <div
+    id="searchbox"
+    class="searchbox"
+    role="searchbox"
+    aria-label="Search the site"
+    tabindex="0"
+    contenteditable="true">
+  </div>
+
+  <button type="button" aria-label="Submit search">Search</button>
+</div>
+----------------------------------------------------------------------------------------------
+
+
+
+
+Aria-hidden attribute :
+----------------------------------------------------------------------------------------------
+If we ever need to hide something to assistive technology we can use the "aria-hidden" attribute.
+however it does not remove the DOM of the original element.
+----------------------------------------------------------------------------------------------
+
+
+"Aria-describedby" attribute :
+----------------------------------------------------------------------------------------------
+Used to provide addtional information about an element to screen reader users by
+referencing existing content on the page. It create a programmatic association between the
+element and the content.
+----------------------------------------------------------------------------------------------
