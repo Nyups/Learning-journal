@@ -1,0 +1,41 @@
+|The purpose of WAI-ARIA and How does it Work. |
+-----------------------------------------------
+
+
+WAI-ARIA
+----------------------------------------------------------------------------------------------
+WAI-ARIA stand for [Web Accessibility Initiative - Rich Internet Application].
+
+It's a specification tha enhances accessibility for dynamic content and UI [User Interface]
+components.
+
+WCAG and WAI-ARIA are not the same. WCAG provides general guidelines for web accessibility,
+while WAI-ARIA offers specific rules for making dybamic and interactive content accessible
+for users of assistive technologies.
+
+WAI-ARIA works by introducing a set of attributes you can add to HTML elements to provide
+additional semantic information. These attribute are categorized into roles, states and properties.
+
+An ARIA role define the purpose of an element within a website or web app.
+Here is an example of setting the role "button" for a <div> element:
+----------------------------------------------------------------------------------------------
+<div role="button">Click me</div>
+----------------------------------------------------------------------------------------------
+By doing this we are indicating to assistive technologt that the element is a button.
+however giving that element the role "button" will not make it act like a <button>.
+We need to use CSS and JS for that.
+
+
+ARIA properties provide additional details about elements. for example
+the "aria-labelledby" <---[wtf is this name] property lets you connect an element to a specific label:
+----------------------------------------------------------------------------------------------
+<h2 id="header-id">About freeCodeCamp</h2>
+<button id="button-id" aria-labelledby="header-id button-id">Learn More</button>
+----------------------------------------------------------------------------------------------
+This will make the elements understable and navigable for users with assistive technologies.
+
+We should use WAI-ARIA only when HTML falls short, and we should not forgot to test them with 
+screen readers, or have people with disabillity test it.
+
+----------------------------------------------------------------------------------------------
+
