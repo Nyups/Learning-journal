@@ -1,0 +1,9 @@
+| Day     | Main focus             | Result                  |
+| ------- | ---------------------- | ----------------------- |
+| **Mon** | JS + DOM               | Task list               |
+| **Tue** | Forms + state          | Advanced task manager   |
+| **Wed** | localStorage + modules | Persistent app          |
+| **Thu** | Async + Fetch + APIs   | API application         |
+| **Fri** | Full project           | Japanese vocabulary app |
+| **Sat** | Polish + GitHub        | Portfolio-ready project |
+| **Sun** | Independent build      | Personal dashboard      |
