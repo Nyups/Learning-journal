@@ -8,12 +8,13 @@
 </head>
 <body>
     <header>
-    <h1>🌸 Task Board Maker 🌸</h1>
+    <h1>Task Board Maker</h1>
 
     </header>
+
     <form action="">
     <fieldset>
-        <legend>Task Maker</legend>
+        <legend>Task Maker V1</legend>
         <label for="task_maker">Task :</label>
         <input type="text" id="task_maker" name="task" placeholder="Today I want..."/>
         <button id="adding" type="button">Add</button>
@@ -24,6 +25,36 @@
     </fieldset>
     </form>
 
+    <br>
+    <form id="task_form">
+        <input id="task_input" type="text" placeholder="Your task here..." />
+
+        <select name="" id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <select name="" id="category">
+            <option value="work">Work</option>
+            <option value="study">Study</option>
+            <option value="personal">Personal</option>
+        </select>
+
+        <input type="date" name="" id="due_date"/>
+
+
+        <button id="task_submit" type="submit">Add Task</button>
+    </form>
+<br>
+    <div id="task_container">
+
+    </div>
+<br>
+    <div id="completed_task_container">
+        <h2>Completed task :</h2>
+
+    </div>
 
 </body>
 <style>
