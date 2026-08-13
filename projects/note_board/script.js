@@ -30,7 +30,7 @@ form.addEventListener("submit", function(event) {
 
 // Taks Maker 2.0 :
 
-// Base Elements
+// Base Elements (Ok)
 const task_container = document.querySelector("#task_container")
 const task_form = document.querySelector("#task_form")
 const task_input = document.querySelector("#task_input")
@@ -39,10 +39,12 @@ const task_category = document.querySelector("#category")
 const task_date = document.querySelector("#due_date")
 const task_submit = document.querySelector("#task_submit")
 const task_card_list = []
-// Completed card part
+// Completed card part (Ok)
 const completed_task_container = document.querySelector("#completed_task_container")
 const completed_task = []
-
+// Save button
+const local_save = document.querySelector("#saving");
+const local_load = document.querySelector("#loading");
 
 // Action
 
@@ -79,30 +81,42 @@ task_submit.addEventListener("click", function() {
         <input type="checkbox" name="To-do" id="completed" value ="true"/>
         <label for="completed">Done</label>
     </div>
-    <button id="delete_button">Remove</button>
+    <button class="delete_button">Remove</button>
     `
     // Style
     task_card.style.border = "solid 1px white"
-    task_card_list.push(task_card.value)
+    task_card_list.push(task_card)
     task_container.appendChild(task_card) 
     
-    // Delete function
-    const delete_button = document.querySelector("#delete_button")
+    // Delete function (Ok)
+    const delete_button = task_card.querySelector(".delete_button") // yes we can do that
     delete_button.addEventListener("click", function() {
         task_card.remove()
     })
 
-    // Filtering task based on Checkbox (not OK yet)
-    const task_checkbox = document.querySelector("#completed")
+    // Filtering task based on Checkbox (OK)
 
-     task_checkbox.addEventListener("change", function () {
-        if (task_checkbox.checked) {
+     const checkbox = task_card.querySelector("input[type='checkbox']") 
+        console.log(checkbox) // return null help
+     checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
             completed_task_container.appendChild(task_card)
             console.log("I became true !")
         } else {
             task_container.appendChild(task_card)
             console.log("I became false !")
         }
+     })
+
+     // Save test
+     local_save.addEventListener("click", function() {
+     localStorage.setItem("saved_task", JSON.stringify(task_card))
+     console.log("saved")
+     })
+      
+      local_load.addEventListener("click", function() {
+      JSON.parse(localStorage.getItem("saved_task"))
+      console.log("Loaded")
      })
 
     return task_card  
@@ -127,5 +141,4 @@ task_submit.addEventListener("click", function() {
 // }
 
 
-// Corrected Version :
 

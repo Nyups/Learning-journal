@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js" defer></script>
+    <!--<script src="script.js" defer></script> -->
+    <script src="Storage_exercise.js" defer></script>
 </head>
 <body>
+    <!-- Task board -->
     <header>
     <h1>Task Board Maker</h1>
 
@@ -56,11 +58,46 @@
 
     </div>
 
+<h3>///////////////////////////////////////////////////////////////</h3>
+
+
+
+    <!-- Local storage test -->
+     <!-- Greeting from storage -->
+    <div id="storage">
+    <h2>Local storage app test :</h2>
+    <br>
+    <h3>What's your name ?</h3>
+    <input id="user_input" type="text" placeholder="your name here..."/>
+    <button type="button" id="save">Save</button>
+    <button type="button" id="greeting">Greet Me</button>
+    </div>
+
+
+
+    <!-- Character card creator -->
+     <div id="character_input">
+     <h2>Character cards maker</h2>
+     <h3>name</h3>
+     <input type="text" name="name" id="name_input" placeholder="your character name is..." />
+     <select name="race" id="race_selection">
+        <option value="Drone">Drone</option>
+        <option value="Human">Human</option>
+        <option value="Other">Other</option>
+     </select>
+     <h3>Lore</h3>
+     <textarea id="character_lore" rows="5" cols="40" placeholder="Your story here..."></textarea>
+     <button type="button" id="character_save">Submit</button>
+     <button type="button" id="test_load">test load</button>
+     </div>
+
+     <div id="character_card"></div>
 </body>
 <style>
     body {
         background-color: black;
         color: white;
     }
+
 </style>
 </html>

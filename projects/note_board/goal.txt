@@ -7,3 +7,281 @@
 | **Fri** | Full project           | Japanese vocabulary app |
 | **Sat** | Polish + GitHub        | Portfolio-ready project |
 | **Sun** | Independent build      | Personal dashboard      |
+
+
+
+
+
+
+
+
+LESSON :
+
+
+Part 2: JavaScript Modules
+
+Now we're going to solve another problem.
+
+Imagine your application gets bigger.
+
+You start with:
+
+script.js
+
+Then eventually:
+
+// DOM stuff
+// task logic
+// storage logic
+// validation
+// API calls
+// utilities
+// event listeners
+// random debugging
+// 700 lines of suffering
+
+You can put everything in one file.
+
+But you shouldn't.
+
+9. Multiple <script> files vs modules
+
+You might already know this:
+
+<script src="dom.js"></script>
+<script src="storage.js"></script>
+<script src="app.js"></script>
+
+This gives you multiple JavaScript files.
+
+But these files traditionally share the same global scope.
+
+That can cause problems.
+
+For example:
+
+script1.js
+const username = "Nyun";
+script2.js
+const username = "Cyn";
+
+Now JavaScript is having a small existential crisis because you've created conflicting declarations.
+
+Modules solve this.
+
+10. Creating a module
+
+Suppose we have:
+
+js/
+├── app.js
+├── storage.js
+└── task.js
+storage.js
+export function saveTasks(tasks) {
+    localStorage.setItem(
+        "tasks",
+        JSON.stringify(tasks)
+    );
+}
+
+The important part:
+
+export
+
+It means:
+
+"Other modules are allowed to use this."
+
+11. Importing it
+
+In app.js:
+
+import { saveTasks } from "./storage.js";
+
+Now:
+
+saveTasks(tasks);
+
+works.
+
+So:
+
+storage.js
+     │
+     │ export
+     ▼
+saveTasks()
+     │
+     │ import
+     ▼
+app.js
+
+That's the basic module system.
+
+12. Exporting multiple things
+
+You can export multiple functions:
+
+export function saveTasks(tasks) {
+    localStorage.setItem(
+        "tasks",
+        JSON.stringify(tasks)
+    );
+}
+
+export function loadTasks() {
+    return JSON.parse(
+        localStorage.getItem("tasks")
+    ) || [];
+}
+
+Then:
+
+import {
+    saveTasks,
+    loadTasks
+} from "./storage.js";
+
+Now your app can do:
+
+const tasks = loadTasks();
+
+saveTasks(tasks);
+
+Much cleaner.
+
+13. Default exports
+
+You'll also encounter:
+
+export default function saveTasks(tasks) {
+    // ...
+}
+
+Then import it without braces:
+
+import saveTasks from "./storage.js";
+
+Compare:
+
+Named export
+export function saveTasks() {}
+import { saveTasks } from "./storage.js";
+Default export
+export default function saveTasks() {}
+import saveTasks from "./storage.js";
+
+For now, I'd recommend becoming comfortable with named exports first.
+
+They're easier to understand when you're learning.
+
+14. Modules in HTML
+
+There's one important difference.
+
+Instead of:
+
+<script src="app.js"></script>
+
+you use:
+
+<script type="module" src="app.js"></script>
+
+Without this:
+
+import ...
+
+won't work correctly.
+
+So your structure could be:
+
+project/
+│
+├── index.html
+│
+├── css/
+│   └── style.css
+│
+└── js/
+    ├── app.js
+    ├── storage.js
+    └── tasks.js
+
+And:
+
+<script type="module" src="./js/app.js"></script>
+15. How I'd structure today's project
+
+Let's take your task manager and make it slightly more serious.
+
+task-manager/
+│
+├── index.html
+│
+├── style.css
+│
+└── js/
+    │
+    ├── app.js
+    ├── storage.js
+    └── tasks.js
+storage.js
+
+Responsible for:
+
+localStorage
+tasks.js
+
+Responsible for:
+
+creating tasks
+deleting tasks
+updating tasks
+app.js
+
+Responsible for:
+
+DOM
+events
+connecting everything together
+
+This is the important conceptual distinction:
+
+storage.js
+    ↓
+"I know how to save data."
+
+tasks.js
+    ↓
+"I know how tasks work."
+
+app.js
+    ↓
+"I make the application actually happen."
+
+That's separation of concerns.
+
+And it's one of the ideas you'll encounter again and again when you move into React, Node, Express, databases, etc.
+
+16. The architecture you're beginning to learn
+
+Your application starts looking like this:
+
+              ┌──────────────┐
+              │    app.js    │
+              │              │
+              │ DOM + Events │
+              └──────┬───────┘
+                     │
+             ┌───────┴───────┐
+             ▼               ▼
+      ┌────────────┐   ┌─────────────┐
+      │  tasks.js  │   │ storage.js  │
+      │            │   │             │
+      │ task logic │   │ localStorage│
+      └────────────┘   └─────────────┘
+
+You're basically learning the tiny baby version of architecture used in much larger applications.
+
+Which is exactly what we want.
