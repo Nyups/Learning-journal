@@ -1,3 +1,3 @@
-import { sayHello } from "../modules/module-lesson.js";
+import { sayHello } from "../modules/lesson/module-lesson.js";
 
 sayHello("salad");
