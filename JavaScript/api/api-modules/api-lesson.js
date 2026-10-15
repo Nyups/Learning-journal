@@ -63,7 +63,7 @@ getUser();
 // What does it do?
 // -"async function getUser()" : Define an asynchronous function.
 // -"await fetch(...)" : Waits for the request to produce a response.
-// -"await response.json()" : Waits for the response body to be parsed.
+// -"await response.json()" : Waits for the response body to be parsed and return it. [IMPORTANT]
 // -"console.log(data.name)" : tada.
 
 // [IMPORTANT NOTE] :
