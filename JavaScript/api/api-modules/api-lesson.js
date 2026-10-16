@@ -92,3 +92,42 @@ async function getUser2() {
     console.error("Something went wrong:", error);
   }
 }
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+// 6. "Try" and "Catch" :
+// What belong inside "try" :
+// The try clock contain code that might throw an error and that we want to handle if it does.
+// Few example of what type of code the "try" block should have :
+
+// - Network request :
+const response1 = await fetch('url'); // The connection might fail or the request might be aborted.
+
+// - Parsing data :
+const data1 = JSON.parse(variable/text);
+
+// - Operation we explicitly expect might throw :
+riskyOperation(); // This could be a function that validate input and throws an error when the inputs is invalid.
+
+
+// A whole block would look like this :
+export async function getUser3() {
+  try { // Code that has a chance to fail
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/users/1"
+    ); // Wait for the HTTP response
+    if (!response.ok) { // If the response is NOT OK
+      throw new Error("Failed to fetch user!");
+      // Create and throw an error
+    }
+    const data = await response.json();
+    // Parse the JSON response into a JavaScript value
+    return data; // Return the data
+
+  } catch (error) { // Catch errors thrown in the try block
+    console.error("Failed to get a user!", error);
+    // Log our message and the error object
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/

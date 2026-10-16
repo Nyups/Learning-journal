@@ -1,5 +1,21 @@
-import { getCard, createCard } from "./api-exercise.js";
+// Corrected :
 
-const data = await getCard(); // OK after a timeout
+import { getUser, getUserInfo } from "./api-exercise.js";
 
-createCard(data);
+const button = document.querySelector(".btn");
+const searchInput = document.querySelector("#search");
+
+button.addEventListener("click", async function getData() {
+  const id = searchInput.value.trim();
+
+  if (!id) {
+    console.log("Please enter a user ID!");
+    return;
+  }
+
+  const userData = await getUser(id);
+
+  if (userData) {
+    getUserInfo(userData);
+  }
+});
