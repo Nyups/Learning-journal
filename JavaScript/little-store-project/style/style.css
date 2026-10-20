@@ -17,3 +17,23 @@ body {
     position: relative;
     bottom: 10px;
 }
+
+.render-area {
+    width: 60%;
+    margin: 20px auto;
+    background-color: beige;
+    text-align: center;
+    border-radius: 20px;
+    border: solid white;
+}
+
+.poke-heading {
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: pink;
+    border: solid white;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
