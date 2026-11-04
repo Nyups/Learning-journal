@@ -1,4 +1,6 @@
-// exercise 01 : Type safe user profile
+// Those exercise use what we learned in the
+// TypeScript Theory 01 to 04
+
 const profile: {
   username: string;
   age: number;
