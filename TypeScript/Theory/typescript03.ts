@@ -19,7 +19,7 @@ const stacks03:string[] = ['HTML','CSS','JavaScript','Vue','TypeScript'];
 const mimo = {
     username: "Nyun",
     isEmployed: true
-}
+}   
 
 // To explicitly type the object properties we can type it this way :
 const mimo02: {username: string, isEmployed: boolean} = {
