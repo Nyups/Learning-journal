@@ -28,5 +28,3 @@ age = 123n
 let humans: boolean = true;
 let ghost: boolean = false;
 // Basically yes or no value
-
-
